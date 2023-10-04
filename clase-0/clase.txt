@@ -1,1 +1,56 @@
 clase 0: repaso
+
+tipado
+
+todo dato tiene un tipo:
+
+10      -> number
+'hola'  -> string
+true    -> boolean
+{ a: 1} -> Object
+[ 1,2 ] -> Array
+
+tipado fuerte vs debil
+
+suma: op1 + op2
+number + number
+
+concatenacion: op1 + op2
+string + string
+
+AND: op1 && op2
+boolean && boolean
+
+3 + 'hola'
+tipado fuerte:
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+tipado debil:
+'3hola'
+
+----------------------------------
+
+tipado estatico vs dinamico
+
+estatico:
+la variable tiene un tipo de dato fijo.
+solo puede guardar datos de ese tipo.
+
+int edad;
+edad = 40;
+
+edad = 'hola'
+// Error!
+
+tipado dinamico:
+la variable se adapta al tipo del dato que almacena.
+
+edad = 40
+typeof edad == 'number'
+
+edad = 'veinte'
+typeof edad == 'string'
+
+----------------------------------------------
+
+JavaScript tiene tipado dinamico y debil!
