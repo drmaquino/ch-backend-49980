@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "nombre": "marian",
+    "apellido": "profe",
+    "edad": 38,
+    "curso": "49980"
+  },
+  {
+    "id": 2,
+    "nombre": "otro",
+    "apellido": "profe",
+    "edad": 40,
+    "curso": "49980"
+  }
+]
