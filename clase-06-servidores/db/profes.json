@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "nombre": "marian",
+    "rol": "profe"
+  },
+  {
+    "id": 2,
+    "nombre": "leandro",
+    "rol": "tutor"
+  },
+  {
+    "id": 3,
+    "nombre": "franco",
+    "rol": "tutor"
+  },
+  {
+    "id": 4,
+    "nombre": "mario",
+    "rol": "tutor"
+  },
+  {
+    "id": 5,
+    "nombre": "samir",
+    "rol": "tutor"
+  },
+  {
+    "id": 6,
+    "nombre": "alejandra",
+    "rol": "tutor"
+  }
+]

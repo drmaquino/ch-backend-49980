@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "name": "clase-06-servidores",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cliente.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

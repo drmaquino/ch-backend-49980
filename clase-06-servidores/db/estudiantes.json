@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "nombre": "eduardo",
+    "curso": "backend"
+  },
+  {
+    "id": 2,
+    "nombre": "mauro",
+    "curso": "backend"
+  },
+  {
+    "id": 3,
+    "nombre": "emiliano",
+    "curso": "backend"
+  }
+]
