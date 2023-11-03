@@ -1,0 +1,12 @@
+<section class="personas">
+  <h1>Personas</h1>
+  {{#if hayPersonas}}
+  <ul>
+    {{#each personas}}
+    <li>{{this.nombre}} {{this.apellido}} ({{this.edad}} años)</li>
+    {{/each}}
+  </ul>
+  {{else}}
+  Aun no hay personas cargadas.
+  {{/if}}
+</section>

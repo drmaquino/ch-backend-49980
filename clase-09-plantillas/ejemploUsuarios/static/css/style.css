@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  box-sizing: content-box;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul {
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1em;
+}
+
+.personas ul {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+form {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  text-align: start;
+  gap: 1em;
+  padding: 10px 5px;
+}

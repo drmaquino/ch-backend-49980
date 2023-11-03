@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "clase-09-plantillas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "nodemon -e 'js,handlebars' src/main.js"
+  },
+  "keywords": [ ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
+  }
+}
