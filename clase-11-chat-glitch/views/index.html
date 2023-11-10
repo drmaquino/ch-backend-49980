@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <title>Chat</title>
+</head>
+
+<body>
+  <h1>Chat de Coder</h1>
+  <form>
+    <input type="text" name="mensaje" id="inputMensaje" placeholder="Mensaje">
+    <button type="submit">Enviar</button>
+  </form>
+  <h2>Mensajes</h2>
+  <ul id="ulMensajes"></ul>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/static/js/index.js"></script>
+</body>
+
+</html>

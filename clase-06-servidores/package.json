@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "cliente.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node src/servidorExpress.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
