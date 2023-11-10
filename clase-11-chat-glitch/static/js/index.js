@@ -58,4 +58,12 @@ function empezarAChatear() {
       position: 'top-right'
     })
   })
+
+  socket.on('usuarioDesconectado', nombreUsuario => {
+    Swal.fire({
+      text: `${nombreUsuario} se ha desconectado`,
+      toast: 'true',
+      position: 'top-right'
+    })
+  })
 }

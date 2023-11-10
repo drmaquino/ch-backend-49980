@@ -26,4 +26,9 @@ io.on('connection', async (socket) => {
     io.sockets.emit('mensajes', await mensajeManager.obtenerTodos())
   })
 
+  socket.on('disconnecting', reason => {
+    socket.broadcast.emit('usuarioDesconectado',
+      socket.handshake.auth.username)
+  })
+
 })
