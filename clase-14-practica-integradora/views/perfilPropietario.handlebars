@@ -1,0 +1,20 @@
+<h3>{{propietario.nombre}}</h3>
+<ul>
+  <li>telefono: {{propietario.telefono}}</li>
+  <li>email: {{propietario.email}}</li>
+</ul>
+{{#if tienePropiedades}}
+<h3>Propiedades</h3>
+{{#each propiedades}}
+<ul>
+  <li><a href="/propiedades?id={{this}}">{{this}}</a></li>
+</ul>
+{{/each}}
+{{/if}}
+<h3>Cargar nueva propiedad</h3>
+<form>
+  <input type="text" name="direccion" id="" placeholder="direccion" required>
+  <input type="number" name="cantAmbientes" id="" placeholder="cantidad de ambientes" required>
+  <button type="submit">Cargar</button>
+</form>
+<script src="/static/js/perfilPropietario.js"></script>
