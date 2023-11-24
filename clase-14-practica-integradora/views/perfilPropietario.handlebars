@@ -12,9 +12,10 @@
 {{/each}}
 {{/if}}
 <h3>Cargar nueva propiedad</h3>
-<form>
+<form enctype="multipart/form-data">
   <input type="text" name="direccion" id="" placeholder="direccion" required>
   <input type="number" name="cantAmbientes" id="" placeholder="cantidad de ambientes" required>
+  <input type="file" name="fotoProp" id="">
   <button type="submit">Cargar</button>
 </form>
 <script src="/static/js/perfilPropietario.js"></script>

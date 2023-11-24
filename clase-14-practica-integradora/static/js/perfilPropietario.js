@@ -7,15 +7,14 @@ if (idPropietario) {
     event.preventDefault()
 
     // @ts-ignore
-    const formDataEncoded = new URLSearchParams(new FormData(formNuevaPropiedad))
+    const formData = new FormData(formNuevaPropiedad)
 
     try {
       const res = await fetch(
         `/api/propietarios/${idPropietario}/propiedades`,
         {
           method: 'POST',
-          body: formDataEncoded,
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+          body: formData
         },
       )
       const resData = await res.json()

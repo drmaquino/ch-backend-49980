@@ -1,6 +1,7 @@
 import { Router, json, urlencoded } from 'express'
 import { propietariosManager } from '../services/propietarios.manager.js'
 import { propiedadesManager } from '../services/propiedades.manager.js'
+import { extract } from '../middlewares/files.js'
 
 export const apiInmobiliariaRouter = Router()
 
@@ -20,10 +21,10 @@ apiInmobiliariaRouter.post('/propietarios', async (req, res) => {
   }
 })
 
-apiInmobiliariaRouter.post('/propietarios/:idPropietario/propiedades', async (req, res) => {
+apiInmobiliariaRouter.post('/propietarios/:idPropietario/propiedades', extract('fotoProp'), async (req, res) => {
   const idPropietario = req.params.idPropietario
   try {
-    const propiedad = await propiedadesManager.cargar(idPropietario, req.body)
+    const propiedad = await propiedadesManager.cargar(idPropietario, req.body, req.file)
     res.status(201).json(propiedad)
   } catch (error) {
     res.status(400).json({

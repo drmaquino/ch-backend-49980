@@ -2,4 +2,7 @@
 <ul>
   <li>Direccion: {{propiedad.direccion}}</li>
   <li>Cantidad de ambientes: {{propiedad.cantAmbientes}}</li>
+  {{#each propiedad.imagenes}}
+  <li><img src="{{this}}" alt=""></li>
+  {{/each}}
 </ul>

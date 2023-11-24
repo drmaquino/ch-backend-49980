@@ -3,12 +3,15 @@ import { dbPropiedades } from '../models/Propiedad.mongoose.js'
 import { dbPropietarios } from '../models/Propietario.mongoose.js'
 
 class PropiedadesManager {
-  async cargar(idPropietario, datosPropiedad) {
+  async cargar(idPropietario, datosPropiedad, datosImg) {
     const propietario = await dbPropietarios.findById(idPropietario)
     if (!propietario) {
       throw new Error('no existe el propietario con ese id')
     }
+
     datosPropiedad._id = randomUUID()
+    datosPropiedad.imagenes = [datosImg.path]
+
     const propiedad = await dbPropiedades.create(datosPropiedad)
 
     await dbPropietarios.findByIdAndUpdate(idPropietario, {
