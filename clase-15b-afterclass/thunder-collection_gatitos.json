@@ -1,0 +1,152 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "gatitos",
+    "dateExported": "2023-11-24T23:11:34.522Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f9de232c-f7d3-4f40-8746-90082811ead0",
+            "colId": "a5d2fa39-8f5b-49e8-83fa-6d1ce4d42d2b",
+            "containerId": "",
+            "name": "crear gatito",
+            "url": "localhost:8080/api/gatitos",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-24T22:31:14.154Z",
+            "modified": "2023-11-24T22:35:10.204Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"cleopatra\",\n  \"raza\":\"la mejor\",\n  \"color\":\"gris\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "33f82d4b-f2ea-4e00-9252-9b3fbe1018df",
+            "colId": "a5d2fa39-8f5b-49e8-83fa-6d1ce4d42d2b",
+            "containerId": "",
+            "name": "crear gatito con foto",
+            "url": "localhost:8080/api/gatitos",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-11-24T22:57:06.931Z",
+            "modified": "2023-11-24T22:58:03.390Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nombre",
+                        "value": "cleopatra"
+                    },
+                    {
+                        "name": "raza",
+                        "value": "la mejor"
+                    },
+                    {
+                        "name": "color",
+                        "value": "gris"
+                    }
+                ],
+                "files": [
+                    {
+                        "name": "fotoUrl",
+                        "value": "/home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-49980/clase-14b-afterclass/cleopatra.jpeg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "14db3c33-32e9-4809-9762-5deab3a8919f",
+            "colId": "a5d2fa39-8f5b-49e8-83fa-6d1ce4d42d2b",
+            "containerId": "",
+            "name": "actualizar foto de un gatito",
+            "url": "localhost:8080/api/gatitos/25a6f71a-9c85-4b28-98e7-d50d16dacfd6/fotourl",
+            "method": "POST",
+            "sortNum": 17500,
+            "created": "2023-11-24T23:07:02.135Z",
+            "modified": "2023-11-24T23:09:43.732Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "fotoUrl",
+                        "value": "/home/drmaquino/Documents/CODERHOUSE/coderhouse-backend-49980/clase-14b-afterclass/cleopatra2.jpeg"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "6588c3ec-185c-4395-b22b-f04ec243f98a",
+            "colId": "a5d2fa39-8f5b-49e8-83fa-6d1ce4d42d2b",
+            "containerId": "",
+            "name": "obtener todos los gatitos",
+            "url": "localhost:8080/api/gatitos",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-24T22:35:27.998Z",
+            "modified": "2023-11-24T22:35:37.616Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "ba73196b-4b84-4b29-895b-d6871f67fde2",
+            "colId": "a5d2fa39-8f5b-49e8-83fa-6d1ce4d42d2b",
+            "containerId": "",
+            "name": "obtener un gatito",
+            "url": "localhost:8080/api/gatitos/4a3263de-65e6-4475-a88f-f785d74d3159",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-24T22:35:43.392Z",
+            "modified": "2023-11-24T22:36:13.321Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9cf7de17-c04a-43e2-af76-022c44f07ea9",
+            "colId": "a5d2fa39-8f5b-49e8-83fa-6d1ce4d42d2b",
+            "containerId": "",
+            "name": "modificar un gatito",
+            "url": "localhost:8080/api/gatitos/4a3263de-65e6-4475-a88f-f785d74d3159",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-11-24T22:36:25.637Z",
+            "modified": "2023-11-24T22:39:53.598Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"raza\":\"egipcio\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "18f865f4-79af-481f-acb4-ee3e306ac69c",
+            "colId": "a5d2fa39-8f5b-49e8-83fa-6d1ce4d42d2b",
+            "containerId": "",
+            "name": "eliminar un gatito",
+            "url": "localhost:8080/api/gatitos/4a3263de-65e6-4475-a88f-f785d74d3159",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-11-24T22:40:05.101Z",
+            "modified": "2023-11-24T22:40:31.945Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
