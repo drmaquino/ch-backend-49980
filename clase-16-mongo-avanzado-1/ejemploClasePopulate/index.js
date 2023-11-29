@@ -4,8 +4,8 @@ import { Course } from './models/Course.js'
 
 await mongoose.connect('mongodb://localhost/coderhouse')
 
-console.log(await Student.deleteMany({}))
-console.log(await Course.deleteMany({}))
+// console.log(await Student.deleteMany({}))
+// console.log(await Course.deleteMany({}))
 
 // console.log(await Student.create({
 //   first_name: 'Celia',
@@ -27,13 +27,13 @@ console.log(await Course.deleteMany({}))
 
 // console.log(
 //   await Student.findByIdAndUpdate(
-//     'df0f79aa-52b2-4012-8441-5d8c7ef04270',
-//     { $push: { courses: { _id: '1ee6e1b2-1faa-4fde-855e-664f2c9eac11' } } },
+//     'e17f0c47-b5ad-4f51-85d8-59ee61c2e413',
+//     { $push: { courses: { _id: 'd37a3a6c-802a-4d78-9036-6feaa7ccfce9' } } },
 //     { new: true })
 // )
 
 // // sin poblar
-// console.log(JSON.stringify(await Student.find().lean(), null, 2))
+console.log(JSON.stringify(await Student.find().lean(), null, 2))
 
 // // con poblar
 // console.log(JSON.stringify(await Student.find().populate('courses').lean(), null, 2))

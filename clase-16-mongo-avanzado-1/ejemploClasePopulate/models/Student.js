@@ -9,18 +9,15 @@ const studentSchema = new Schema({
     last_name: String,
     email: String,
     gender: String,
-    courses: [{
-        type: String,
-        ref: 'courses'
-    }],
+    courses: [{ type: String, ref: 'courses' }],
 }, {
     strict: 'throw',
     versionKey: false
 })
 
-// studentSchema.pre('find', function (next) {
-//     this.populate('courses')
-//     next()
-// })
+studentSchema.pre('find', function (next) {
+    this.populate('courses')
+    next()
+})
 
 export const Student = model(studentCollection, studentSchema)

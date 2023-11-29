@@ -21,8 +21,16 @@ const carritos = [
         id: 1,
         prods: [
             {
+                prod: 1,
                 cant: 1,
-                prod: 1
+            },
+            {
+                prod: 2,
+                cant: 4,
+            },
+            {
+                prod: 3,
+                cant: 1,
             }
         ]
     },
@@ -30,8 +38,8 @@ const carritos = [
         id: 2,
         prods: [
             {
+                prod: 1,
                 cant: 5,
-                prod: 1
             }
 
         ]
@@ -54,11 +62,12 @@ const p = {
 }
 
 // NO QUIERO HACER ESTO!!!
-// const carr = carritos.findOne({_id: 1})
+// const carr = carritos.findById(1)
 // const tempProds = {}
 // for (let i = 0; i < carr.prods.length; i++) {
+//     const idProd = carr.prods[i].prod
 //     if (tempProds[carr.prods[i]]) {
-//         tempProds[carr.prods[i]] = productos.findOne({ _id: prod})
+//         tempProds[carr.prods[i]] = productos.findById(idProd)
 //     }
 //     carr.prods[i] = tempProds[carr.prods[i]] //.....
 // }

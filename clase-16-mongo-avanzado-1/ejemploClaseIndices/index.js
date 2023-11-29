@@ -1,12 +1,12 @@
-import { User } from './models/users.js'
 import mongoose from 'mongoose'
 import users from './users.json' assert { type: 'json' }
+import { User } from './models/User.js'
 
 await mongoose.connect('mongodb://localhost/coderhouse')
 
+// console.log(await User.deleteMany({}))
 // console.log(await User.insertMany(users))
 // console.log(await User.countDocuments())
-// console.log(await User.deleteMany({}))
 // console.log(await User.syncIndexes())
 
 // const response = await User.find().explain('executionStats')
