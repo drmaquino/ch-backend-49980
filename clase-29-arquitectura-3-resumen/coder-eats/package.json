@@ -1,0 +1,22 @@
+{
+  "type": "module",
+  "name": "coder-eats",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node .",
+    "test": "nodemon ."
+  },
+  "keywords": [],
+  "author": "drmaquino",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "latest",
+    "nodemon": "latest"
+  }
+}
