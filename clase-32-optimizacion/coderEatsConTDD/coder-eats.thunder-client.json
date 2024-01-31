@@ -1,0 +1,146 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CoderHouse Backend V3 - clase 29 - arquitectura 3",
+    "dateExported": "2024-01-31T02:23:42.608Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "932dd51e-d36f-4cf7-8a95-205f10441be5",
+            "colId": "50262959-d513-47c4-8dca-90429f33b47c",
+            "containerId": "",
+            "name": "get business",
+            "url": "localhost:8080/api/business",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-05-03T12:31:12.553Z",
+            "modified": "2023-05-03T12:32:13.206Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "39bf0409-0a8d-456a-8718-0dc3b6f5d277",
+            "colId": "50262959-d513-47c4-8dca-90429f33b47c",
+            "containerId": "",
+            "name": "post business",
+            "url": "localhost:8080/api/business",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-05-03T12:31:48.469Z",
+            "modified": "2024-01-19T00:56:11.985Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"rotiseria\",\n  \"products\": [\n    {\"_id\": 1, \"description\":\"papasfritas\", \"price\":100},\n    {\"_id\":2, \"description\":\"pure\", \"price\":200 }\n  ]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "42f61acd-ef61-4b5b-b570-874048900aec",
+            "colId": "50262959-d513-47c4-8dca-90429f33b47c",
+            "containerId": "",
+            "name": "post user",
+            "url": "localhost:8080/api/users",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-05-03T12:32:32.857Z",
+            "modified": "2024-01-19T00:58:42.010Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"pepe\",\n  \"email\":\"pepe@mail.com\",\n  \"role\":\"admin\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6932338a-fe77-42e5-b231-b3be4990ef87",
+            "colId": "50262959-d513-47c4-8dca-90429f33b47c",
+            "containerId": "",
+            "name": "create pending order",
+            "url": "localhost:8080/api/orders/",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2023-05-03T12:34:33.159Z",
+            "modified": "2024-01-19T01:01:57.431Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"businessId\":\"d2d9bfcd-9ac2-4738-8567-86278ce809a1\",\n  \"userId\":\"b27315c7-94e0-4d35-b77a-e517b9183879\",\n  \"products\": [{ \"_id\": 1, \"quantity\": 1 }, { \"_id\": 2, \"quantity\": 5 }]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "eedbb5a7-004f-4257-92f2-a1f6dc23daf7",
+            "colId": "50262959-d513-47c4-8dca-90429f33b47c",
+            "containerId": "",
+            "name": "complete order",
+            "url": "localhost:8080/api/orders/f09241f6-9cb3-41b3-991b-fc625740554c",
+            "method": "PUT",
+            "sortNum": 36250,
+            "created": "2023-05-03T15:59:25.019Z",
+            "modified": "2024-01-24T01:19:15.327Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \"status\": \"completed\" }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1dca99f8-19c3-4dea-b158-b784c6507bae",
+            "colId": "50262959-d513-47c4-8dca-90429f33b47c",
+            "containerId": "",
+            "name": "cancel order",
+            "url": "localhost:8080/api/orders/f09241f6-9cb3-41b3-991b-fc625740554c",
+            "method": "PUT",
+            "sortNum": 36875,
+            "created": "2024-01-19T02:38:14.389Z",
+            "modified": "2024-01-24T01:19:37.891Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{ \"status\": \"cancelled\" }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "bb11ab2b-9b94-4f1b-bed2-4ee8ad5ec5ad",
+            "colId": "50262959-d513-47c4-8dca-90429f33b47c",
+            "containerId": "",
+            "name": "get orders",
+            "url": "localhost:8080/api/orders",
+            "method": "GET",
+            "sortNum": 37500,
+            "created": "2023-05-03T12:37:42.801Z",
+            "modified": "2024-01-19T02:19:35.660Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d65f5825-1876-4bd7-9e1d-33c4fff7e65a",
+            "colId": "50262959-d513-47c4-8dca-90429f33b47c",
+            "containerId": "",
+            "name": "get users",
+            "url": "localhost:8080/api/users",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-05-03T12:33:58.814Z",
+            "modified": "2023-05-03T12:34:14.155Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
