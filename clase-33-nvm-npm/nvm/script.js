@@ -1,0 +1,1 @@
+console.log(process.env.hola || 'nada aun...')
