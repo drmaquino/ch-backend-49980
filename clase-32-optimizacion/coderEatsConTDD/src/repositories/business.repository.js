@@ -11,7 +11,7 @@ export class BusinesssRepository {
 
   async readOne(criteria) {
     const businessDto = await businessDao.readOne(criteria)
-    if (!businessDto) throw new NotFoundError('orden')
+    if (!businessDto) throw new NotFoundError('negocio')
     return new Business(businessDto)
   }
 
@@ -23,7 +23,7 @@ export class BusinesssRepository {
 
   async updateOne(criteria, newBusiness) {
     const updatedDto = await businessDao.updateOne(criteria, newBusiness.toPOJO())
-    if (!updatedDto) throw new NotFoundError('orden')
+    if (!updatedDto) throw new NotFoundError('negocio')
     return new Business(updatedDto)
   }
 
@@ -33,7 +33,7 @@ export class BusinesssRepository {
 
   async deleteOne(criteria) {
     const deletedDto = await businessDao.deleteOne(criteria)
-    if (!deletedDto) throw new NotFoundError('orden')
+    if (!deletedDto) throw new NotFoundError('negocio')
     return new Business(deletedDto)
   }
 
