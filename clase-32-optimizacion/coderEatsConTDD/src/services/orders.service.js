@@ -3,7 +3,7 @@ import { smsService } from './sms/sms.service.js'
 import { Order } from '../models/Order.js'
 import { ordersRepository } from '../repositories/orders.repository.js'
 import { ADMIN_NUMBER } from '../config/config.js'
-import { businessRepository } from '../repositories/business.repository.js'
+import { businessesRepository } from '../repositories/businesses.repository.js'
 import { usersRepository } from '../repositories/users.repository.js'
 
 class OrdersService {
@@ -20,7 +20,7 @@ class OrdersService {
 
   async create({ userId, businessId, products }) {
     const user = await usersRepository.readOne({ _id: userId })
-    const business = await businessRepository.readOne({ _id: businessId })
+    const business = await businessesRepository.readOne({ _id: businessId })
 
     const prodsConPrecio = {}
     const prodIds = products.map(p => p._id)

@@ -1,13 +1,13 @@
-import { usersDao } from '../daos/index.js'
-import { UsersRepository, usersRepository } from '../repositories/users.repository.js'
 import { usersService } from '../services/users.service.js'
 
 export async function handleGet(req, res, next) {
   try {
     if (req.params.id) {
-      res.json(await usersDao.readOne({ _id: req.params.id }))
+      const user = await usersService.readOne({ _id: req.params.id })
+      res.json(user)
     } else {
-      res.json(await usersDao.readMany(req.query))
+      const users = await usersService.readMany(req.query)
+      res.json(users)
     }
   } catch (error) {
     next(error)

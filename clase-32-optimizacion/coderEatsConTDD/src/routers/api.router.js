@@ -1,7 +1,7 @@
 import { Router, json } from 'express'
 import { usersRouter } from './users.router.js'
 import { ordersRouter } from './orders.router.js'
-import { businessRouter } from './business.router.js'
+import { businessesRouter } from './businesses.router.js'
 import { sessionsRouter } from './sessions.router.js'
 import { TiposDeError } from '../models/errors/tiposDeError.js'
 
@@ -11,7 +11,7 @@ apiRouter.use(json())
 
 apiRouter.use('/users', usersRouter)
 apiRouter.use('/orders', ordersRouter)
-apiRouter.use('/business', businessRouter)
+apiRouter.use('/business', businessesRouter)
 apiRouter.use('/sessions', sessionsRouter)
 
 

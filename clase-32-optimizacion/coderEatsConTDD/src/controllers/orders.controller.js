@@ -14,7 +14,8 @@ export async function handleGet(req, res, next) {
 
 export async function handlePost(req, res, next) {
   try {
-    res.status(201).json(await ordersService.create(req.body))
+    const order = await ordersService.create(req.body)
+    res.status(201).json(order)
   } catch (error) {
     next(error)
   }

@@ -25,30 +25,30 @@ const businessSchema = new Schema({
   }
 })
 
-const businessModel = model('business', businessSchema)
+const businessesModel = model('business', businessSchema)
 
 //---------------------------------------------------
 
-export class BusinessDao {
+export class BusinessesDao {
 
   async create(element) {
-    const business = await businessModel.create(element)
+    const business = await businessesModel.create(element)
     return business.toPOJO()
   }
 
   async readOne(criteria) {
-    const business = await businessModel.findOne(criteria)
+    const business = await businessesModel.findOne(criteria)
     if (!business) return null
     return business.toPOJO()
   }
 
   async readMany(criteria) {
-    const businesses = await businessModel.find(criteria)
+    const businesses = await businessesModel.find(criteria)
     return businesses.map(business => business.toPOJO())
   }
 
   async updateOne(criteria, newData) {
-    const modifiedBusiness = await businessModel
+    const modifiedBusiness = await businessesModel
       .findOneAndUpdate(criteria, newData, { new: true })
 
     if (!modifiedBusiness) return null
@@ -60,7 +60,7 @@ export class BusinessDao {
   }
 
   async deleteOne(criteria) {
-    const deletedBusiness = await businessModel
+    const deletedBusiness = await businessesModel
       .findOneAndDelete(criteria)
     if (!deletedBusiness) return null
     return deletedBusiness.toPOJO()
