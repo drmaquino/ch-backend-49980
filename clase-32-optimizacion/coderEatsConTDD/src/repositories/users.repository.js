@@ -5,14 +5,13 @@ import { NotFoundError } from '../models/errors/notFound.error.js'
 export class UsersRepository {
 
   async save(order) {
-    const orderDto = await usersDao.create(order.toPOJO())
-    return new User(orderDto)
+    await usersDao.create(order.toPOJO())
   }
 
   async readOne(criteria) {
-    const orderDto = await usersDao.readOne(criteria)
-    if (!orderDto) throw new NotFoundError('usuario')
-    return new User(orderDto)
+    const userDto = await usersDao.readOne(criteria)
+    if (!userDto) throw new NotFoundError('usuario')
+    return new User(userDto)
   }
 
   async readMany(criteria) {

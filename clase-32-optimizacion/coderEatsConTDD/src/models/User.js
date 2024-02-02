@@ -4,6 +4,7 @@ export class User {
   #_id
   #name
   #email
+  #password
   #role
   #orders
 
@@ -11,12 +12,14 @@ export class User {
     _id = generateUUID(),
     name,
     email,
+    password,
     role,
     orders = [],
   }) {
     this.#_id = _id
     this.name = name
     this.email = email
+    this.#password = password
     this.role = role
     this.#orders = orders
   }
@@ -61,6 +64,8 @@ export class User {
     }
     this.#orders.push(order)
   }
+
+  isValidPassword(password) { return password === this.#password }
 
   toPOJO() {
     return {

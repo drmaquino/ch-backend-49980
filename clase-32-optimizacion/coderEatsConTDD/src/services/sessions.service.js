@@ -1,12 +1,9 @@
-import { usersDao } from '../daos/index.js'
 import { AuthenticationError } from '../models/errors/authentication.error.js'
+import { usersRepository } from '../repositories/users.repository.js'
 
 export class SessionsService {
-  constructor(dao) {
-    this.dao = dao
-  }
-
   async login({ email, password }) {
+
     if (!email) {
       throw new AuthenticationError()
     }
@@ -17,18 +14,19 @@ export class SessionsService {
 
     let user
     try {
-      user = await this.dao.readOne({ email })
+      user = await usersRepository.readOne({ email })
     } catch (error) {
       throw new AuthenticationError()
     }
 
-    if (user.password !== password) {
+    if (!user.isValidPassword(password)) {
       throw new AuthenticationError()
     }
+
     return {
       email
     }
   }
 }
 
-export const sessionsService = new SessionsService(usersDao)
+export const sessionsService = new SessionsService()

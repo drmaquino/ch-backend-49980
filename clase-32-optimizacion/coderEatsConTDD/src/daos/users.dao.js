@@ -5,6 +5,7 @@ const usersSchema = new Schema({
   _id: { type: String, default: generateUUID },
   name: { type: String, required: true },
   email: { type: String, required: true },
+  password: { type: String, required: true },
   role: { type: String, enum: ['user', 'admin'], default: 'user' },
   orders: {
     type: [
@@ -25,6 +26,7 @@ const usersSchema = new Schema({
         _id: this._id,
         name: this.name,
         email: this.email,
+        password: this.password,
         role: this.role,
         orders: this.orders,
       }

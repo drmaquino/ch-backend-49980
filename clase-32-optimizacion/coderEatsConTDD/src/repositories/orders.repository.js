@@ -5,8 +5,7 @@ import { NotFoundError } from '../models/errors/notFound.error.js'
 export class OrdersRepository {
 
   async save(order) {
-    const orderDto = await ordersDao.create(order.toPOJO())
-    return new Order(orderDto)
+    await ordersDao.create(order.toPOJO())
   }
 
   async readOne(criteria) {
