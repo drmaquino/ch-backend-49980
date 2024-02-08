@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "name": "server",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node .",
+    "test": "nodemon ."
+  },
+  "keywords": [],
+  "author": "drmaquino",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "latest",
+    "mongoose": "^8.1.1",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/express": "latest",
+    "nodemon": "latest"
+  }
+}
