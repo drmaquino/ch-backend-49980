@@ -1,0 +1,1 @@
+export const CNX_STR = process.env.CNX_STR || 'mongodb://localhost/coderhouse'

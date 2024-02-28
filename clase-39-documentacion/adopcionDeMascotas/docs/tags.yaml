@@ -1,0 +1,11 @@
+tags:
+  - name: Mascotas
+    description: API para administrar mascotas.
+
+  - name: Usuarios
+    description: API para administrar usuarios.
+
+  - name: Adopciones
+    description: API para administrar adopciones.
+
+

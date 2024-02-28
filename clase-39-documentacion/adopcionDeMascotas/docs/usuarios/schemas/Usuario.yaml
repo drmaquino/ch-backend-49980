@@ -1,0 +1,42 @@
+components:
+  schemas:
+    Usuario:
+      type: object
+      required:
+        - id
+        - nombre
+        - apellido
+        - email
+        - password
+        - rol
+        - mascotas
+      properties:
+        id:
+          type: string
+          description: El id del usuario.
+        nombre:
+          type: string
+          description: El nombre del usuario.
+        apellido:
+          type: string
+          description: El apellido del usuario.
+        email:
+          type: string
+          description: El email del usuario.
+        password:
+          type: string
+          description: La contraseña del usuario.
+        rol:
+          type: string
+          description: El rol del usuario.
+        mascotas:
+          type: string
+          description: Los ids de las mascotas del usuario.
+      example:
+        id: 4ughd7r3-365n-t5u6-sk85-h58sk23j5k2h
+        nombre: juan
+        apellido: perez
+        email: juan@mail.com
+        password: abc123
+        rol: user
+        mascotas: [] 

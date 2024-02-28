@@ -1,0 +1,21 @@
+paths:
+  /api/adopciones/{id}:
+    get:
+      summary: Devuelve la adopción con el ID dado.
+      tags:
+        - Adopciones
+      parameters:
+      - name: id
+        in: path
+        description: parametro de ruta con el ID de la adopción.
+        required: true
+        type: string
+      responses:
+        "200":
+          description: La adopcion con el ID dado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adopcion'
+        "404":
+          description: Error de Adopción no encontrada.

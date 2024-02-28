@@ -1,0 +1,41 @@
+components:
+  schemas:
+    Mascota:
+      type: object
+      required:
+        - id
+        - nombre
+        - especie
+        - fechaNacimiento
+        - adoptada
+        - duenio
+        - foto
+      properties:
+        id:
+          type: string
+          description: El id de la mascota.
+        nombre:
+          type: string
+          description: El nombre de la mascota.
+        especie:
+          type: string
+          description: La especie de la mascota.
+        fechaNacimiento:
+          type: string
+          description: La fecha de nacimiento de la mascota.
+        adoptada:
+          type: string
+          description: Indica si la mascota se encuentra adoptada o no.
+        duenio:
+          type: string
+          description: El dueño de la mascota.
+        foto:
+          type: string
+          description: La foto de la mascota.
+      example:
+        id: 4ughd7r3-365n-t5u6-sk85-h58sk23j5k2h
+        nombre: pepe
+        especie: loro
+        fechaNacimiento: '2010-06-15'
+        adoptada: false
+        duenio: 5k2h4ugh-d7r3-365n-t5u6-sk85h58sk23j

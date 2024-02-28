@@ -1,0 +1,21 @@
+paths:
+  /api/mascotas/{id}:
+    get:
+      summary: Devuelve la mascota con el ID dado.
+      tags:
+        - Mascotas
+      parameters:
+      - name: id
+        in: path
+        description: parametro de ruta con el ID de la mascota.
+        required: true
+        type: string
+      responses:
+        "200":
+          description: La mascota con el ID dado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mascota'
+        "404":
+          description: Error de Mascota no encontrada.

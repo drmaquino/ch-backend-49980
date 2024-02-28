@@ -1,0 +1,27 @@
+components:
+  requestBodies:
+    DatosCrearUsuario:
+      type: object
+      required:
+        - nombre
+        - apellido
+        - email
+        - password
+      properties:
+        nombre:
+          type: string
+          description: El nombre del usuario.
+        apellido:
+          type: string
+          description: El apellido del usuario.
+        email:
+          type: string
+          description: El email del usuario.
+        password:
+          type: string
+          description: La contraseña del usuario.
+      example:
+        nombre: juan
+        apellido: perez
+        email: juan@mail.com
+        password: abc123

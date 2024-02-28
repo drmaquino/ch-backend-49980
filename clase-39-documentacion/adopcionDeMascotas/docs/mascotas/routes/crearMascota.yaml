@@ -1,0 +1,19 @@
+paths:
+  /api/mascotas:
+    post:
+      summary: Crea una nueva mascota.
+      tags:
+        - Mascotas
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/DatosCrearMascota'
+      responses:
+        "201":
+          description: La mascota creada.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Mascota'

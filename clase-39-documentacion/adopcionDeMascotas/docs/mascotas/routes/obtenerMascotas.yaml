@@ -1,0 +1,15 @@
+paths:
+  /api/mascotas:
+    get:
+      summary: Devuelve todas las mascotas disponibles.
+      tags:
+        - Mascotas
+      responses:
+        "200":
+          description: Cada mascota disponible.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Mascota'

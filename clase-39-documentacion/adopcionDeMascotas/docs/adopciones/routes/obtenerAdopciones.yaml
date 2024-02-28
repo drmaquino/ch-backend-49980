@@ -1,0 +1,15 @@
+paths:
+  /api/adopciones:
+    get:
+      summary: Devuelve todas las adopciones disponibles.
+      tags:
+        - Adopciones
+      responses:
+        "200":
+          description: Cada adopción disponible.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Adopcion'

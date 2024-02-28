@@ -1,0 +1,22 @@
+components:
+  schemas:
+    Adopcion:
+      type: object
+      required:
+        - id
+        - idUsuario
+        - idMascota
+      properties:
+        id:
+          type: string
+          description: El id de la adopcion.
+        idUsuario:
+          type: string
+          description: El id del usuario.
+        idMascota:
+          type: string
+          description: El id de la mascota.
+      example:
+        id: 3j5k2hr3-t5u6-365n-sk85-h58sk24ughd7
+        idUsuario: 4ughd7r3-365n-t5u6-sk85-h58sk23j5k2h
+        idMascota: d7r34ugh-t5u6-365n-sk85-8sk23j5k2hh5

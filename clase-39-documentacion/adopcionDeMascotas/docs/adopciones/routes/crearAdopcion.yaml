@@ -1,0 +1,19 @@
+paths:
+  /api/adopciones:
+    post:
+      summary: Crea una nueva adopción.
+      tags:
+        - Adopciones
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/DatosCrearAdopcion'
+      responses:
+        "201":
+          description: La adopción creada.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adopcion'

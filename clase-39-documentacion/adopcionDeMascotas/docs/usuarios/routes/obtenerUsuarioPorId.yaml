@@ -1,0 +1,21 @@
+paths:
+  /api/usuarios/{id}:
+    get:
+      summary: Devuelve el usuario con el ID dado.
+      tags:
+        - Usuarios
+      parameters:
+      - name: id
+        in: path
+        description: parametro de ruta con el ID del usuario.
+        required: true
+        type: string
+      responses:
+        "200":
+          description: El usuario con el ID dado.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+        "404":
+          description: Error de Usuario no encontrado.
