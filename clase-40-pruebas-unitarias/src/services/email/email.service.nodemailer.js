@@ -1,7 +1,10 @@
-export class FakeEmailService {
+import nodemailer from 'nodemailer'
 
-  constructor() {
-    this.user = 'TEST_SENDER'
+export class NodemailerEmailService {
+
+  constructor(nodemailerConfig) {
+    this.transport = nodemailer.createTransport(nodemailerConfig)
+    this.user = nodemailerConfig.auth.user
   }
 
   async send(destinatario, asunto, mensaje, adjuntos = []) {
@@ -16,6 +19,6 @@ export class FakeEmailService {
       emailOptions.attachments = adjuntos
     }
 
-    console.log(JSON.stringify(emailOptions, null, 2))
+    await this.transport.sendMail(emailOptions)
   }
 }

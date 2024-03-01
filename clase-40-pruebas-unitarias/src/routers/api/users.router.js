@@ -12,7 +12,7 @@ usersRouter.post('/',
   }),
   appendJwtAsCookie,
   async (req, res, next) => {
-    res['successfullPost'](req.user)
+    res['successfullPost'](req['user'])
   })
 
 usersRouter.get('/current',
@@ -22,7 +22,7 @@ usersRouter.get('/current',
   }),
   usersOnly,
   async (req, res, next) => {
-    res['successfullGet'](req.user)
+    res['successfullGet'](req['user'])
   })
 
 // usersRouter.get('/',

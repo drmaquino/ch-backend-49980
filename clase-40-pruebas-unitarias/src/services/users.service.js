@@ -10,11 +10,14 @@ export class UsersService {
   }
 
   async register(userData) {
-    userData.password = hashear(userData.password)
-    const user = new User(userData)
+    const user = new User({
+      ...userData,
+      password: hashear(userData.password)
+    })
     await this.usersRepository.save(user)
     await this.emailService.send(user.email, 'bienvenida', 'gracias por registrarte!')
-    return user.toPOJO()
+    const pojo = user.toPOJO()
+    return pojo
   }
 }
 
