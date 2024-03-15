@@ -1,0 +1,15 @@
+{"level":"info","message":"conectado a base de datos"}
+{"level":"info","message":"servidor escuchando peticiones en puerto: 8080"}
+{"level":"error","message":"Unauthorized","name":"AuthenticationError","status":401}
+{"level":"info","message":"conectado a base de datos"}
+{"level":"info","message":"servidor escuchando peticiones en puerto: 8080"}
+{"level":"info","message":"conectado a base de datos"}
+{"level":"info","message":"servidor escuchando peticiones en puerto: 8080"}
+{"level":"info","message":"conectado a base de datos"}
+{"level":"info","message":"servidor escuchando peticiones en puerto: 8080"}
+{"level":"http","message":{"method":"GET","url":"/api/users/current"}}
+{"level":"error","message":"Unauthorized","name":"AuthenticationError","status":401}
+{"level":"info","message":"conectado a base de datos"}
+{"level":"info","message":"servidor escuchando peticiones en puerto: 8080"}
+{"level":"http","message":{"method":"GET","url":"/api/users/current"}}
+{"level":"error","message":"Unauthorized","name":"AuthenticationError","status":401}

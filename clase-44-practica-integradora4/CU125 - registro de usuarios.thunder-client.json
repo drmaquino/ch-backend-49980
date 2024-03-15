@@ -1,0 +1,29 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CU125 - registro de usuarios",
+    "dateExported": "2024-03-14T23:20:04.873Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9c47102f-d606-44ec-b20e-6c12b1950705",
+            "colId": "30f7c9af-431a-48e0-babf-94b71287c078",
+            "containerId": "",
+            "name": "register user",
+            "url": "localhost:8080/api/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-14T23:19:53.409Z",
+            "modified": "2024-03-14T23:19:53.409Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"maquino\",\n  \"password\": \"abc123\",\n  \"email\": \"maria@nito.com\",\n  \"displayName\": \"marianito\"\n}",
+                "form": []
+            },
+            "reqType": "get",
+            "tests": []
+        }
+    ]
+}
