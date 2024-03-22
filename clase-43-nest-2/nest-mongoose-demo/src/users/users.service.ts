@@ -5,6 +5,7 @@ import { Model } from 'mongoose'
 import { User, UsersDocument } from './schema/user.schema.js'
 import { InjectModel } from '@nestjs/mongoose'
 import { ConfigService } from '@nestjs/config'
+import { randomUUID } from 'crypto'
 
 const DEFAULT_USERS_ORDER = 'nombre'
 
@@ -18,7 +19,10 @@ export class UsersService {
   ) { }
 
   create(createUserDto: CreateUserDto) {
-    return this.usersModel.create(createUserDto)
+    return this.usersModel.create({
+      _id: randomUUID(),
+      ...createUserDto
+    })
   }
 
   findAll() {

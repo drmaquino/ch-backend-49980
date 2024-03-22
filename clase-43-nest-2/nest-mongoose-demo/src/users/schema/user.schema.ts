@@ -5,6 +5,9 @@ import { HydratedDocument } from 'mongoose'
 export class User {
 
   @Prop({ required: true })
+  _id: string
+
+  @Prop({ required: true })
   nombre: string
 
   @Prop({ required: true })
